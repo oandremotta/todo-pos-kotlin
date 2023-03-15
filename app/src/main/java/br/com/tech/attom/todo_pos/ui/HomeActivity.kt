@@ -1,23 +1,24 @@
 package br.com.tech.attom.todo_pos.ui
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.SparseBooleanArray
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import br.com.tech.attom.todo_pos.R
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
+import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     private var gson = Gson()
-    lateinit var mGoogleSignClient: GoogleSignInClient;
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -27,6 +28,13 @@ class HomeActivity : AppCompatActivity() {
 
         val listViewTasks = findViewById<android.widget.ListView>(R.id.listViewTasks);
         val createTask = findViewById<android.widget.EditText>(R.id.createTask);
+        val sair = findViewById<TextView>(R.id.txtSair)
+
+
+        sair.setOnClickListener {
+            Firebase.auth.signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
 
         val itemList = getData();
 
@@ -62,13 +70,6 @@ class HomeActivity : AppCompatActivity() {
             position.clear();
             adapter.notifyDataSetChanged()
         }
-
-        findViewById<View>(R.id.clear).setOnClickListener {
-            itemList.clear()
-            saveData(itemList)
-            adapter.notifyDataSetChanged()
-        }
-
     }
 
     private fun getData(): ArrayList<String> {

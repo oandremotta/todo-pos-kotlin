@@ -9,6 +9,14 @@
     tools:context=".ui.HomeActivity"
     tools:ignore="AutoFill">
 
+    <TextView
+        android:id="@+id/txtSair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,9 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Lista de tarefas"
-            android:textColor="@color/black"
-            android:textSize="26dp" />
+            android:text="@string/app_name"
+            android:textColor="@color/pink"
+            android:textSize="36dp" />
 
         <EditText
             android:id="@+id/createTask"
@@ -45,6 +53,7 @@
                 android:id="@+id/add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
                 android:text="Adicionar" />
 
@@ -55,12 +64,6 @@
                 android:layout_weight="1"
                 android:text="Deletar" />
 
-            <Button
-                android:id="@+id/clear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Limpar" />
         </LinearLayout>
 
         <TextView
@@ -71,7 +74,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="Minhas tarefas"
-            android:textColor="@color/black"
+            android:textColor="@color/blue"
             android:textSize="20dp" />
 
         <ListView
@@ -81,4 +84,5 @@
             android:layout_below="@+id/subtitleView"
             android:choiceMode="multipleChoice" />
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

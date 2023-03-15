@@ -3,6 +3,7 @@
     <string name="app_login">Login</string>
     <string name="app_enter">Entrar</string>
     <string name="app_register">Não possui cadastro?</string>
+    <string name="app_logout">Logout</string>
     <string name="register">Cadastrar</string>
     <string name="back">Voltar</string>
 

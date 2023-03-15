@@ -54,21 +54,21 @@ class LoginActivity : AppCompatActivity() {
                     //val user = auth.currentUser
                     startActivity(Intent(this, HomeActivity::class.java))
                     Toast.makeText(
-                        baseContext, "Authentication success.",
+                        baseContext, "Autenticação feita com sucesso.",
                         Toast.LENGTH_SHORT
                     ).show()
 
                 } else {
                     // If sign in fails, display a message to the user.
                     Toast.makeText(
-                        baseContext, "Authentication failed.",
+                        baseContext, "Dados inválidos.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
             }
             .addOnFailureListener {
                 Toast.makeText(
-                    baseContext, "Authentication failed. ${it.localizedMessage}",
+                    baseContext, "Autenticação falhou. ${it.localizedMessage}",
                     Toast.LENGTH_SHORT
                 ).show()
             }

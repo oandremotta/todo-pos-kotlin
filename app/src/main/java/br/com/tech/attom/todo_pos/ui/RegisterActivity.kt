@@ -37,7 +37,7 @@ class RegisterActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.etPassword)
 
         if (email.text.isEmpty() || password.text.isEmpty()) {
-            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "Por favor preencha todos os campos.", Toast.LENGTH_SHORT)
                 .show()
             return
         }
@@ -49,18 +49,18 @@ class RegisterActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     startActivity(Intent(this, HomeActivity::class.java))
                     Toast.makeText(
-                        baseContext, "Authentication success.",
+                        baseContext, "Autenticação feita com successo.",
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
                     Toast.makeText(
-                        baseContext, "Authentication failed.",
+                        baseContext, "Dados inválidos.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
             }
             .addOnFailureListener {
-                Toast.makeText(this, "Error occurred ${it.localizedMessage}", Toast.LENGTH_SHORT)
+                Toast.makeText(this, "Ocorreu um erro ${it.localizedMessage}", Toast.LENGTH_SHORT)
                     .show()
             }
     }
