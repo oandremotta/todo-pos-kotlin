@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "388932428285",
+    "project_id": "todo-pos-kotlin",
+    "storage_bucket": "todo-pos-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388932428285:android:c979509919deb8f3d23994",
+        "android_client_info": {
+          "package_name": "br.com.tech.attom.todo_pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388932428285-0r0sd4e4biuc2kvl4rm4f4urhrb58n1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE_cg__s6Ic8-HoFgPG-74JwV2TTaIWaA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388932428285-0r0sd4e4biuc2kvl4rm4f4urhrb58n1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
