@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Task List</string>
+    <string name="app_login">Login</string>
+    <string name="app_enter">Enter</string>
+    <string name="app_register">Don\'t have an account?</string>
+    <string name="app_logout">Logout</string>
+    <string name="register">Register</string>
+    <string name="back">Back</string>
+    <string name="app_change_password">Change Password</string>
+    <string name="app_forget_password">Forgot Password?</string>
+    <string name="btn_select_date">Date</string>
+    <string name="btn_select_hour">Time</string>
+    <string name="save_task">Save</string>
+    <string name="tasks_list">Task List</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="surname">Surname</string>
+    <string name="or">or</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in_with_google">Log In with Google</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
+    <string name="recover">Recover</string>
+    <string name="no_password">No Password</string>
+    <string name="very_weak_password">Very Weak</string>
+    <string name="weak_password">Weak</string>
+    <string name="medium_password">Medium</string>
+    <string name="strong_password">Strong</string>
+    <string name="very_strong_password">Very Strong</string>
+    <string name="task_title_field">Title</string>
+    <string name="task_description_field">Description</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="invalid">Invalid</string>
+</resources>

@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.tech.attom.todo_pos.R
+import br.com.tech.attom.todo_pos.ui.fragments.EmailInput
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -30,13 +31,18 @@ class LoginActivity : AppCompatActivity() {
             performLogin()
         }
 
-        findViewById<Button>(R.id.btn_registrar).setOnClickListener {
+        findViewById<Button>(R.id.btn_register).setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn_forget_password).setOnClickListener {
+            val activity = Intent(this, ForgotPasswordActivity::class.java);
+            startActivity(activity);
         }
     }
 
     private fun performLogin() {
-        val email = findViewById<EditText>(R.id.etEmail)
+        val email = supportFragmentManager.findFragmentById(R.id.etEmail) as EmailInput
         val password = findViewById<EditText>(R.id.etPassword)
 
         if (email.text.isEmpty() || password.text.isEmpty()) {

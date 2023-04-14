@@ -34,8 +34,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-    <EditText
+    <fragment
         android:id="@+id/etEmail"
+        android:name="br.com.tech.attom.todo_pos.ui.fragments.EmailInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -47,8 +48,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <EditText
+    <fragment
         android:id="@+id/etPassword"
+        android:name="br.com.tech.attom.todo_pos.ui.fragments.PasswordLevel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"

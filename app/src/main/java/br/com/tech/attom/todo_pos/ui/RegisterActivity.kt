@@ -7,6 +7,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.tech.attom.todo_pos.R
+import br.com.tech.attom.todo_pos.ui.fragments.EmailInput
+import br.com.tech.attom.todo_pos.ui.fragments.PasswordLevel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -33,8 +35,8 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun performSignUp() {
-        val email = findViewById<EditText>(R.id.etEmail)
-        val password = findViewById<EditText>(R.id.etPassword)
+        val email = supportFragmentManager.findFragmentById(R.id.etEmail) as EmailInput
+        val password = supportFragmentManager.findFragmentById(R.id.etPassword) as PasswordLevel
 
         if (email.text.isEmpty() || password.text.isEmpty()) {
             Toast.makeText(this, "Por favor preencha todos os campos.", Toast.LENGTH_SHORT)
